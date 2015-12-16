@@ -44,4 +44,11 @@ class Menu
         
         return currentHeader.componentsSeparatedByString("</h2>")[0]
     }
+    
+    func numberOfRowsForSection(index:Int)->Int{
+        let headers = self.markdownString.componentsSeparatedByString("<h2>")
+        let currentHeader = headers[index+1]
+    
+        return currentHeader.componentsSeparatedByString("<li>").count-1
+    }
 }

@@ -23,7 +23,7 @@ class MenuTableViewController: UITableViewController{
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return self.dataSource.numberOfRowsForSection(section)
     }
     
     // Style Cell
