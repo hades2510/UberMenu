@@ -94,7 +94,7 @@
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="3wC-aq-NeA" id="MCN-YW-Odu"/>
+                            <outlet property="dataSource" destination="3wC-aq-NeA" id="Hi2-me-Gaa"/>
                             <outlet property="delegate" destination="3wC-aq-NeA" id="6GX-E3-v7O"/>
                         </connections>
                     </tableView>

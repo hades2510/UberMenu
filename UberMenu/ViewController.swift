@@ -13,7 +13,9 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     
     var bleManager: CBCentralManager!;
     var peripheral: CBPeripheral!;
-    var menu      : String="";
+    var rawMenu   : String="";
+    var menu      : Menu!;
+
 
     @IBOutlet weak var debugView: UITextView!
     @IBOutlet weak var menuLabel: UILabel!
@@ -117,10 +119,11 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
             
             
             if( currentString.containsString("--==--") ){
+                self.menu = Menu(rawMenu)
                 presentMenu()
             }
             
-            menu += currentString;
+            rawMenu += currentString;
         }
     }
     
@@ -157,13 +160,7 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     }
     
     func presentMenu(){
-        var htmlString = (menu as NSString).htmlFromMarkdown()
-        
-        htmlString = "<style>h2{color:rgb(100,200,100);font-size:20px}h3{font-size:18px;}body{color:rgb(255,255,255);font-family:-apple-system;font-size:16px}</style>" + htmlString
-        
-        let builder = DTHTMLAttributedStringBuilder(HTML: htmlString.dataUsingEncoding(NSUnicodeStringEncoding), options: [DTUseiOS6Attributes:1], documentAttributes: nil);
-        
-        if let attributedMenu = builder.generatedAttributedString(){
+        if let attributedMenu = menu.attributedText(){
             menuArea.attributedText = attributedMenu
         }
     }
@@ -189,6 +186,10 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "go_to_table" {
+            (segue.destinationViewController as! MenuTableViewController).dataSource = self.menu
+        }
+    }
 }
 

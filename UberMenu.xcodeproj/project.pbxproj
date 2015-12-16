@@ -10,6 +10,8 @@
 		3282689D5DF26B585E23F0F7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F816AE04E87FEA4B957A4BB3 /* libPods.a */; };
 		8E0E8CCE1C21A9810005F6A1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0E8CCD1C21A9810005F6A1 /* icon@2x.png */; };
 		8E0E8CD01C21A9ED0005F6A1 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0E8CCF1C21A9ED0005F6A1 /* icon@3x.png */; };
+		8E0E8CD61C21ADA00005F6A1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E8CD51C21ADA00005F6A1 /* Menu.swift */; };
+		8E0E8CD81C21BB2F0005F6A1 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E8CD71C21BB2F0005F6A1 /* MenuTableViewController.swift */; };
 		8E85244B1BF606A4002CAA6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85244A1BF606A4002CAA6A /* AppDelegate.swift */; };
 		8E85244D1BF606A4002CAA6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85244C1BF606A4002CAA6A /* ViewController.swift */; };
 		8E8524501BF606A4002CAA6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E85244E1BF606A4002CAA6A /* Main.storyboard */; };
@@ -34,6 +36,8 @@
 		59659081616B233F88CB841A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8E0E8CCD1C21A9810005F6A1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		8E0E8CCF1C21A9ED0005F6A1 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
+		8E0E8CD51C21ADA00005F6A1 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		8E0E8CD71C21BB2F0005F6A1 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		8E8524471BF606A4002CAA6A /* UberMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E85244A1BF606A4002CAA6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E85244C1BF606A4002CAA6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8E0E8CD11C21ACA50005F6A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E0E8CD51C21ADA00005F6A1 /* Menu.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		8E85243E1BF606A3002CAA6A = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +118,7 @@
 		8E8524491BF606A4002CAA6A /* UberMenu */ = {
 			isa = PBXGroup;
 			children = (
+				8E0E8CD11C21ACA50005F6A1 /* Model */,
 				8E8F033A1C15EA1400DE951B /* Utils */,
 				8E8F03391C15E9F800DE951B /* Support files */,
 				8E8F031F1C15E9B100DE951B /* Vendor */,
@@ -116,6 +129,7 @@
 				8E8524531BF606A4002CAA6A /* LaunchScreen.storyboard */,
 				8E8524561BF606A4002CAA6A /* Info.plist */,
 				8EC59C3F1BFB2B7200445953 /* SplashController.swift */,
+				8E0E8CD71C21BB2F0005F6A1 /* MenuTableViewController.swift */,
 			);
 			path = UberMenu;
 			sourceTree = "<group>";
@@ -318,10 +332,12 @@
 			files = (
 				8E85244D1BF606A4002CAA6A /* ViewController.swift in Sources */,
 				8E85244B1BF606A4002CAA6A /* AppDelegate.swift in Sources */,
+				8E0E8CD81C21BB2F0005F6A1 /* MenuTableViewController.swift in Sources */,
 				8EC59C401BFB2B7200445953 /* SplashController.swift in Sources */,
 				8E8F03381C15E9B100DE951B /* renderers.c in Sources */,
 				8E8F033D1C15EA3E00DE951B /* NSString+Markdown.m in Sources */,
 				8E8F03311C15E9B100DE951B /* buffer.c in Sources */,
+				8E0E8CD61C21ADA00005F6A1 /* Menu.swift in Sources */,
 				8E8F03361C15E9B100DE951B /* markdown.c in Sources */,
 				8E8F032F1C15E9B100DE951B /* array.c in Sources */,
 			);
