@@ -56,6 +56,8 @@ class Menu
         let headers = self.markdownString.componentsSeparatedByString("<h2>")
         let currentHeader = headers[section+1]
         
-        return currentHeader.componentsSeparatedByString("</li>")[row].stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString("<li>", withString: "")
+        let item = currentHeader.componentsSeparatedByString("</li>")[row].stringByReplacingOccurrencesOfString("\n", withString: "").componentsSeparatedByString("<li>")[1]
+        
+        return item
     }
 }
