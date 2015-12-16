@@ -13,18 +13,23 @@ class MenuTableViewController: UITableViewController{
     
     var dataSource:Menu!
     
+    //return the number of sections
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.dataSource.sections
     }
     
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.dataSource.sectionName(section)
+    }
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return 1
     }
     
     // Style Cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("bookCell") as UITableViewCell!
+        let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("menuCell") as UITableViewCell!
         
         // Style here
         
