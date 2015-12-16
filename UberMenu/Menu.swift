@@ -51,4 +51,11 @@ class Menu
     
         return currentHeader.componentsSeparatedByString("<li>").count-1
     }
+    
+    func textForSection(section:Int, row:Int)->String{
+        let headers = self.markdownString.componentsSeparatedByString("<h2>")
+        let currentHeader = headers[section+1]
+        
+        return currentHeader.componentsSeparatedByString("</li>")[row].stringByReplacingOccurrencesOfString("\n", withString: "").stringByReplacingOccurrencesOfString("<li>", withString: "")
+    }
 }

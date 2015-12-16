@@ -29,9 +29,10 @@ class MenuTableViewController: UITableViewController{
     // Style Cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("menuCell") as UITableViewCell!
+        let cell:MenuTableCellView = self.tableView.dequeueReusableCellWithIdentifier("menuCell") as! MenuTableCellView
         
-        // Style here
+        cell.descLabel.text = self.dataSource.textForSection(indexPath.section, row: indexPath.row)
+        
         
         return cell
         
