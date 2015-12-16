@@ -160,7 +160,7 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     }
     
     func presentMenu(){
-        if let attributedMenu = menu.attributedText(){
+        if let attributedMenu = self.menu.attributedText(){
             menuArea.attributedText = attributedMenu
         }
     }
