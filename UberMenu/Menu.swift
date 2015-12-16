@@ -8,6 +8,11 @@
 
 import Foundation
 
+struct MenuItem{
+    let name:String
+    let desc:String?
+}
+
 class Menu
 {
     let markdownString:String
@@ -52,11 +57,21 @@ class Menu
         return currentHeader.componentsSeparatedByString("<li>").count-1
     }
     
-    func textForSection(section:Int, row:Int)->String{
+    func textForSection(section:Int, row:Int)->MenuItem{
         let headers = self.markdownString.componentsSeparatedByString("<h2>")
         let currentHeader = headers[section+1]
         
-        let item = currentHeader.componentsSeparatedByString("</li>")[row].stringByReplacingOccurrencesOfString("\n", withString: "").componentsSeparatedByString("<li>")[1]
+        var name = currentHeader.componentsSeparatedByString("</li>")[row].stringByReplacingOccurrencesOfString("\n", withString: "").componentsSeparatedByString("<li>")[1]
+        var desc = ""
+        
+        if name.containsString("(") {
+            let comps = name.componentsSeparatedByString("(")
+            
+            desc = comps[1].stringByReplacingOccurrencesOfString(")", withString: "")
+            name = comps[0].stringByReplacingOccurrencesOfString("(", withString: "")
+        }
+        
+        let item = MenuItem(name:name, desc:desc)
         
         return item
     }

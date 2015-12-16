@@ -31,7 +31,10 @@ class MenuTableViewController: UITableViewController{
         
         let cell:MenuTableCellView = self.tableView.dequeueReusableCellWithIdentifier("menuCell") as! MenuTableCellView
         
-        cell.descLabel.text = self.dataSource.textForSection(indexPath.section, row: indexPath.row)
+        let item = self.dataSource.textForSection(indexPath.section, row: indexPath.row)
+        
+        cell.descLabel.text = item.name
+        cell.moreInfoLabel.text = item.desc
         
         
         return cell
