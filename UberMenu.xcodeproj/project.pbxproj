@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3282689D5DF26B585E23F0F7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F816AE04E87FEA4B957A4BB3 /* libPods.a */; };
+		8E0E8CCE1C21A9810005F6A1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0E8CCD1C21A9810005F6A1 /* icon@2x.png */; };
+		8E0E8CD01C21A9ED0005F6A1 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0E8CCF1C21A9ED0005F6A1 /* icon@3x.png */; };
 		8E85244B1BF606A4002CAA6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85244A1BF606A4002CAA6A /* AppDelegate.swift */; };
 		8E85244D1BF606A4002CAA6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85244C1BF606A4002CAA6A /* ViewController.swift */; };
 		8E8524501BF606A4002CAA6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E85244E1BF606A4002CAA6A /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		59659081616B233F88CB841A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8E0E8CCD1C21A9810005F6A1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
+		8E0E8CCF1C21A9ED0005F6A1 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
 		8E8524471BF606A4002CAA6A /* UberMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E85244A1BF606A4002CAA6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E85244C1BF606A4002CAA6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -165,6 +169,8 @@
 		8EC59C3C1BFB2A0F00445953 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8E0E8CCF1C21A9ED0005F6A1 /* icon@3x.png */,
+				8E0E8CCD1C21A9810005F6A1 /* icon@2x.png */,
 				8EC59C3D1BFB2A0F00445953 /* ironsheeptech_logo_4.png */,
 			);
 			path = Resources;
@@ -242,6 +248,7 @@
 			files = (
 				8E8F03371C15E9B100DE951B /* README in Resources */,
 				8E8F03321C15E9B100DE951B /* CHANGES in Resources */,
+				8E0E8CD01C21A9ED0005F6A1 /* icon@3x.png in Resources */,
 				8E8524551BF606A4002CAA6A /* LaunchScreen.storyboard in Resources */,
 				8E8524521BF606A4002CAA6A /* Assets.xcassets in Resources */,
 				8E8F03341C15E9B100DE951B /* GNUmakefile in Resources */,
@@ -250,6 +257,7 @@
 				8E8F03351C15E9B100DE951B /* LICENSE in Resources */,
 				8EC59C3E1BFB2A0F00445953 /* ironsheeptech_logo_4.png in Resources */,
 				8E8F03301C15E9B100DE951B /* BSDmakefile in Resources */,
+				8E0E8CCE1C21A9810005F6A1 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
