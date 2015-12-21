@@ -172,13 +172,13 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         //UITextArea doesn't support changing text and keeping the formatting
         //when the TextArea is set as selectable false in the IB
         menuArea.selectable = false;
+        
+        log("Starting BLE manager")
+        bleManager = CBCentralManager(delegate:self, queue:nil);
     }
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated);
-        
-        log("Starting BLE manager")
-        bleManager = CBCentralManager(delegate:self, queue:nil);
     }
 
     override func didReceiveMemoryWarning() {
