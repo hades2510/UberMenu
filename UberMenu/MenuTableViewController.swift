@@ -49,21 +49,5 @@ class MenuTableViewController: UITableViewController{
         return cell
         
     }
-    /*
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return UITableViewAutomaticDimension;
-        /*
-        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell") as! MenuTableCellView
-        
-        let item = self.dataSource.textForSection(indexPath.section, row: indexPath.row)
-        
-        cell.nameLabel.text = item.name
-        cell.descLabel.text = item.desc
-        
-        cell.layoutIfNeeded()
-        
-        return cell.contentView.systemLayoutSizeFittingSize(UILayoutFittingExpandedSize).height + 15
-        */
-    }*/
 
 }
