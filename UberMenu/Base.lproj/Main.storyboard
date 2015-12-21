@@ -4,7 +4,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -42,8 +41,8 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iam-mY-tjg">
-                                <rect key="frame" x="532" y="20" width="48" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iam-mY-tjg">
+                                <rect key="frame" x="545" y="20" width="35" height="30"/>
                                 <state key="normal" title="tabel"/>
                                 <connections>
                                     <segue destination="3wC-aq-NeA" kind="show" identifier="go_to_table" id="jbf-Cc-pBX"/>
@@ -80,44 +79,44 @@
         <scene sceneID="78I-6K-8c4">
             <objects>
                 <tableViewController id="3wC-aq-NeA" customClass="MenuTableViewController" customModule="UberMenu" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Pre-t1-fQt">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="62" sectionHeaderHeight="18" sectionFooterHeight="18" id="Pre-t1-fQt">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" id="nqf-fz-zeH" customClass="MenuTableCellView" customModule="UberMenu" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="50" id="nqf-fz-zeH" customClass="MenuTableCellView" customModule="UberMenu" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nqf-fz-zeH" id="Qes-wr-8fQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x39-Qa-aQa">
-                                            <rect key="frame" x="8" y="8" width="450" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x39-Qa-aQa">
+                                            <rect key="frame" x="20" y="10" width="530" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHy-lo-Q0v">
-                                            <rect key="frame" x="8" y="22" width="600" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHy-lo-Q0v">
+                                            <rect key="frame" x="20" y="33" width="530" height="6"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="leadingMargin" secondItem="x39-Qa-aQa" secondAttribute="leading" id="0r5-HI-5l0"/>
-                                        <constraint firstItem="sHy-lo-Q0v" firstAttribute="width" secondItem="Qes-wr-8fQ" secondAttribute="width" id="Chi-iF-DuD"/>
-                                        <constraint firstItem="x39-Qa-aQa" firstAttribute="centerY" secondItem="Qes-wr-8fQ" secondAttribute="centerY" constant="-3" id="E3c-6I-Q9s"/>
-                                        <constraint firstItem="sHy-lo-Q0v" firstAttribute="top" secondItem="x39-Qa-aQa" secondAttribute="bottom" constant="-7" id="Ego-j0-42g"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="sHy-lo-Q0v" secondAttribute="bottom" constant="-8" id="Tym-VT-e8k"/>
-                                        <constraint firstItem="x39-Qa-aQa" firstAttribute="width" secondItem="Qes-wr-8fQ" secondAttribute="width" multiplier="0.75" id="f1J-xd-I72"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="sHy-lo-Q0v" secondAttribute="leading" id="guh-Ey-Tzl"/>
+                                        <constraint firstAttribute="bottom" secondItem="sHy-lo-Q0v" secondAttribute="bottom" constant="10" id="BQ1-i8-Oj6"/>
+                                        <constraint firstItem="sHy-lo-Q0v" firstAttribute="leading" secondItem="Qes-wr-8fQ" secondAttribute="leading" constant="20" id="GTo-dm-fVr"/>
+                                        <constraint firstAttribute="trailing" secondItem="sHy-lo-Q0v" secondAttribute="trailing" constant="50" id="Odf-ej-4D9"/>
+                                        <constraint firstItem="x39-Qa-aQa" firstAttribute="top" secondItem="Qes-wr-8fQ" secondAttribute="top" constant="10" id="XZq-aK-MGm"/>
+                                        <constraint firstItem="sHy-lo-Q0v" firstAttribute="top" secondItem="x39-Qa-aQa" secondAttribute="bottom" constant="2" id="ffG-ST-meN"/>
+                                        <constraint firstItem="x39-Qa-aQa" firstAttribute="leading" secondItem="Qes-wr-8fQ" secondAttribute="leading" constant="20" id="n4K-wb-cxd"/>
+                                        <constraint firstAttribute="trailing" secondItem="x39-Qa-aQa" secondAttribute="trailing" constant="50" id="qRi-CU-hRh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="descLabel" destination="x39-Qa-aQa" id="nIl-VM-5Q3"/>
-                                    <outlet property="moreInfoLabel" destination="sHy-lo-Q0v" id="HH8-nX-My3"/>
+                                    <outlet property="descLabel" destination="sHy-lo-Q0v" id="azL-y7-ToX"/>
+                                    <outlet property="nameLabel" destination="x39-Qa-aQa" id="BaH-cv-cZF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -13,6 +13,15 @@ class MenuTableViewController: UITableViewController{
     
     var dataSource:Menu!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let tableView = self.view as! UITableView?{
+            tableView.rowHeight = UITableViewAutomaticDimension;
+            tableView.estimatedRowHeight = 44;
+        }
+    }
+    
     //return the number of sections
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return self.dataSource.sections
@@ -33,12 +42,28 @@ class MenuTableViewController: UITableViewController{
         
         let item = self.dataSource.textForSection(indexPath.section, row: indexPath.row)
         
-        cell.descLabel.text = item.name
-        cell.moreInfoLabel.text = item.desc
+        cell.nameLabel.text = item.name
+        cell.descLabel.text = item.desc
         
         
         return cell
         
     }
-    
+    /*
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension;
+        /*
+        let cell = tableView.dequeueReusableCellWithIdentifier("menuCell") as! MenuTableCellView
+        
+        let item = self.dataSource.textForSection(indexPath.section, row: indexPath.row)
+        
+        cell.nameLabel.text = item.name
+        cell.descLabel.text = item.desc
+        
+        cell.layoutIfNeeded()
+        
+        return cell.contentView.systemLayoutSizeFittingSize(UILayoutFittingExpandedSize).height + 15
+        */
+    }*/
+
 }

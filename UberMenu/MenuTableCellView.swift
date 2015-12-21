@@ -10,6 +10,6 @@ import Foundation
 
 class MenuTableCellView: UITableViewCell{
     
-    @IBOutlet weak var moreInfoLabel: UILabel!
     @IBOutlet weak var descLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
 }
