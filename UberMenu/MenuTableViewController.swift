@@ -35,6 +35,12 @@ class MenuTableViewController: UITableViewController{
         return self.dataSource.numberOfRowsForSection(section)
     }
     
+    /*
+    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
+        return ["ceva","altceva","super"];
+    }
+    */
+    
     // Style Cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         

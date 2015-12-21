@@ -57,7 +57,7 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
                 log("Received name:")
                 log(name)
             
-                menuLabel.text = name
+                self.navigationItem.title = name
                 
                 self.peripheral = peripheral
                 self.peripheral.delegate = self

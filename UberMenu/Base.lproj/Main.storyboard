@@ -6,6 +6,22 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="60L-53-0aM">
+            <objects>
+                <navigationController id="27d-qB-0uY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="176-8g-1bs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gL0-CZ-9RW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zua-Ik-PLJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-176" y="372"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -28,34 +44,25 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrt-G0-rHg">
-                                <rect key="frame" x="300" y="28" width="0.0" height="0.0"/>
+                                <rect key="frame" x="300" y="72" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c9h-cP-GWr">
-                                <rect key="frame" x="20" y="60" width="560" height="312"/>
+                                <rect key="frame" x="20" y="104" width="560" height="268"/>
                                 <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                                 <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iam-mY-tjg">
-                                <rect key="frame" x="545" y="20" width="35" height="30"/>
-                                <state key="normal" title="tabel"/>
-                                <connections>
-                                    <segue destination="3wC-aq-NeA" kind="show" identifier="go_to_table" id="jbf-Cc-pBX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="c9h-cP-GWr" firstAttribute="top" secondItem="Lrt-G0-rHg" secondAttribute="bottom" constant="32" id="9Cw-HU-mKp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="c5T-ck-ekw" secondAttribute="leading" id="Ehq-T6-Cxv"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Iam-mY-tjg" secondAttribute="trailing" id="EtS-Tq-HDg"/>
                             <constraint firstItem="c5T-ck-ekw" firstAttribute="top" secondItem="c9h-cP-GWr" secondAttribute="bottom" constant="8" id="Rxg-Wb-lJE"/>
-                            <constraint firstItem="Iam-mY-tjg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Vr3-rb-hHZ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c5T-ck-ekw" secondAttribute="bottom" constant="20" id="Zxb-Ad-jZd"/>
                             <constraint firstItem="Lrt-G0-rHg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="b0e-zo-OxB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c9h-cP-GWr" secondAttribute="trailing" id="eEb-te-Ptv"/>
@@ -64,6 +71,13 @@
                             <constraint firstItem="Lrt-G0-rHg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wuF-Ad-FaO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="LkI-8b-yrI">
+                        <barButtonItem key="rightBarButtonItem" title="Tabel" style="plain" id="3yW-db-KTI">
+                            <connections>
+                                <segue destination="3wC-aq-NeA" kind="show" identifier="go_to_table" id="YvA-Yt-Xn6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="debugView" destination="c5T-ck-ekw" id="dPL-qg-uBy"/>
@@ -73,9 +87,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="463" y="372"/>
+            <point key="canvasLocation" x="525" y="372"/>
         </scene>
-        <!--Menu Table View Controller-->
+        <!--Menu tabel-->
         <scene sceneID="78I-6K-8c4">
             <objects>
                 <tableViewController id="3wC-aq-NeA" customClass="MenuTableViewController" customModule="UberMenu" customModuleProvider="target" sceneMemberID="viewController">
@@ -85,7 +99,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="50" id="nqf-fz-zeH" customClass="MenuTableCellView" customModule="UberMenu" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nqf-fz-zeH" id="Qes-wr-8fQ">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
@@ -125,6 +139,7 @@
                             <outlet property="delegate" destination="3wC-aq-NeA" id="6GX-E3-v7O"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Menu tabel" id="3Qh-mj-8hG"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kve-tR-PAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -156,12 +171,12 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="go_to_main" id="aZY-nC-Mma"/>
+                        <segue destination="27d-qB-0uY" kind="show" identifier="go_to_main" id="Ebl-7q-71B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kLc-gG-3XB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-296" y="372"/>
+            <point key="canvasLocation" x="-876" y="372"/>
         </scene>
     </scenes>
     <resources>
