@@ -15,6 +15,9 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     var peripheral: CBPeripheral!;
     var rawMenu   : String="";
     var menu      : Menu!;
+    
+    var menuLength: Int32 = 0;
+    var menuReadBytes: Int32 = 0;
 
 
     @IBOutlet weak var debugView: UITextView!
@@ -115,15 +118,25 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
             
             log(String(CString: pointer, encoding: NSASCIIStringEncoding )!)
             
-            let currentString = String(CString: pointer, encoding: NSASCIIStringEncoding )!
-            
-            
-            if( currentString.containsString("--==--") ){
-                self.menu = Menu(rawMenu)
-                presentMenu()
+            //get the length of the menu
+            if self.menuLength == 0
+            {
+                data.getBytes(&self.menuLength,length:sizeof(Int32))
+                log("Menu length is \(menuLength)")
             }
+            else
+            {
+                let currentString = String(CString: pointer, encoding: NSASCIIStringEncoding )!
+                
+                self.menuReadBytes += data.length
             
-            rawMenu += currentString;
+                rawMenu += currentString;
+                
+                if menuReadBytes >= self.menuLength{
+                    self.menu = Menu(rawMenu)
+                    presentMenu()
+                }
+            }
         }
     }
     
