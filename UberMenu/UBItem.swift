@@ -18,17 +18,17 @@ class UBItem{
     
     var tags:Array<AnyObject>!
     
-    init(name:String, price:String, desc:String){
+    init(_ name:String, price:String, desc:String){
         self.name = name
         self.desc = desc
         self.price = price
     }
     
-    convenience init(name:String,price:String){
-        self.init(name:name, price:price, desc:"")
+    convenience init(_ name:String,price:String){
+        self.init(name, price:price, desc:"")
     }
     
-    convenience init(name:String){
-        self.init(name:name, price:"0.0", desc:"")
+    convenience init(_ name:String){
+        self.init(name, price:"0.0", desc:"")
     }
 }
