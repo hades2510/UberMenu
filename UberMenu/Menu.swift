@@ -8,6 +8,7 @@
 
 import Foundation
 import DTCoreText
+import SwiftyJSON
 
 struct MenuItem{
     let name:String
@@ -32,14 +33,53 @@ class Menu
     init(_ rawString:String){
         self.rawString = rawString
         
-        //let menuJson = JSON(data:rawString)
-        
-        //section
-        self.firstSection = UBSection("firstSection")
-        
         //style for markdown
         self.style = "<style>h2{color:rgb(100,200,100);font-size:20px}h3{font-size:18px;}body{color:rgb(255,255,255);font-family:-apple-system;font-size:16px}</style>"
         self.markdownString = (self.rawString as NSString).htmlFromMarkdown()
+        
+        //section
+        self.firstSection = UBSection("menu")
+        
+        if let data = rawString.dataUsingEncoding(NSUTF8StringEncoding){
+            let jsonMenu = JSON(data:data)
+            
+            self.parseSection(jsonMenu, parentSection: firstSection)
+        }
+    }
+    
+    func parseSection(jsonFragment:JSON, parentSection:UBSection){
+        //we got sections
+        for (_,subJSON):(String,JSON) in jsonFragment["s"]{
+            if let name = subJSON["n"].string {
+                let newSection = UBSection(name)
+                
+                //adding the section to the parent section
+                parentSection.sections.append(newSection)
+                
+                //adding items if any
+                for (_,itemJSON):(String,JSON) in subJSON["i"]{
+                    if let itemName = itemJSON["n"].string{
+                        var price:String = "0.0"
+                        var desc:String = ""
+                        
+                        if let jsonPrice = itemJSON["p"].string{
+                            price = jsonPrice
+                        }
+                        
+                        if let jsonDesc = itemJSON["d"].string{
+                            desc = jsonDesc
+                        }
+                        
+                        let item = UBItem(itemName,price:price,desc:desc)
+                        
+                        newSection.items.append(item)
+                    }
+                }
+                
+                //recurse
+                self.parseSection(subJSON, parentSection: newSection)
+            }
+        }
     }
     
     func markdown()->String{
