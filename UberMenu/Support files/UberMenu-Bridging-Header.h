@@ -10,6 +10,6 @@
 #define UberMenu_Bridging_Header_h
 
 #import "NSString+Markdown.h"
-#import "DTCoreText.h"
+//#import <DTCoreText.h>
 
 #endif /* UberMenu_Bridging_Header_h */

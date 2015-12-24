@@ -474,6 +474,10 @@
 				INFOPLIST_FILE = UberMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					"\"SwiftyJSON\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.samuraibonzai.UberMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UberMenu/Support files/UberMenu-Bridging-Header.h";
@@ -488,6 +492,10 @@
 				INFOPLIST_FILE = UberMenu/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"-framework",
+					"\"SwiftyJSON\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.samuraibonzai.UberMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "UberMenu/Support files/UberMenu-Bridging-Header.h";
