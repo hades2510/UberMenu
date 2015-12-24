@@ -12,9 +12,9 @@ import Foundation
 //Class for holding a menu item
 //
 class UBItem{
-    var name:String
-    var desc:String
-    var price:String
+    let name:String
+    let desc:String
+    let price:String
     
     var tags:Array<AnyObject>!
     

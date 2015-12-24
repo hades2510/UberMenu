@@ -14,6 +14,7 @@
 		8E0E8CD81C21BB2F0005F6A1 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E8CD71C21BB2F0005F6A1 /* MenuTableViewController.swift */; };
 		8E0E8CDB1C21CFE30005F6A1 /* MenuTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E8CDA1C21CFE30005F6A1 /* MenuTableCellView.swift */; };
 		8E1AE1441C2C1CBC009D5A4D /* UBItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AE1431C2C1CBC009D5A4D /* UBItem.swift */; };
+		8E1AE1461C2C1F25009D5A4D /* UBSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AE1451C2C1F25009D5A4D /* UBSection.swift */; };
 		8E85244B1BF606A4002CAA6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85244A1BF606A4002CAA6A /* AppDelegate.swift */; };
 		8E85244D1BF606A4002CAA6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E85244C1BF606A4002CAA6A /* ViewController.swift */; };
 		8E8524501BF606A4002CAA6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E85244E1BF606A4002CAA6A /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		8E0E8CD71C21BB2F0005F6A1 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		8E0E8CDA1C21CFE30005F6A1 /* MenuTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableCellView.swift; sourceTree = "<group>"; };
 		8E1AE1431C2C1CBC009D5A4D /* UBItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBItem.swift; sourceTree = "<group>"; };
+		8E1AE1451C2C1F25009D5A4D /* UBSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBSection.swift; sourceTree = "<group>"; };
 		8E8524471BF606A4002CAA6A /* UberMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E85244A1BF606A4002CAA6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E85244C1BF606A4002CAA6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				8E0E8CD51C21ADA00005F6A1 /* Menu.swift */,
 				8E1AE1431C2C1CBC009D5A4D /* UBItem.swift */,
+				8E1AE1451C2C1F25009D5A4D /* UBSection.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				8E0E8CD81C21BB2F0005F6A1 /* MenuTableViewController.swift in Sources */,
 				8EC59C401BFB2B7200445953 /* SplashController.swift in Sources */,
 				8E8F03381C15E9B100DE951B /* renderers.c in Sources */,
+				8E1AE1461C2C1F25009D5A4D /* UBSection.swift in Sources */,
 				8E8F033D1C15EA3E00DE951B /* NSString+Markdown.m in Sources */,
 				8E0E8CDB1C21CFE30005F6A1 /* MenuTableCellView.swift in Sources */,
 				8E8F03311C15E9B100DE951B /* buffer.c in Sources */,
