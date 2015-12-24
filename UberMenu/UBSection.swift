@@ -20,7 +20,7 @@ class UBSection{
     //items if any
     var items:Array<UBItem>=[]
     
-    init(name:String){
+    init(_ name:String){
         self.name=name
     }
 }
