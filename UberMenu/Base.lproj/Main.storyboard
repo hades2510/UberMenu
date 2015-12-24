@@ -72,7 +72,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LkI-8b-yrI">
-                        <barButtonItem key="rightBarButtonItem" title="Tabel" style="plain" id="3yW-db-KTI">
+                        <barButtonItem key="rightBarButtonItem" title="Tabel" id="3yW-db-KTI">
                             <connections>
                                 <segue destination="3wC-aq-NeA" kind="show" identifier="go_to_table" id="YvA-Yt-Xn6"/>
                             </connections>
@@ -102,7 +102,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nqf-fz-zeH" id="Qes-wr-8fQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x39-Qa-aQa">
