@@ -10,11 +10,6 @@ import Foundation
 import DTCoreText
 import SwiftyJSON
 
-struct MenuItem{
-    let name:String
-    let desc:String?
-}
-
 class Menu
 {
     var markdownString:String = ""
@@ -26,7 +21,7 @@ class Menu
     
     var sections:Int{
         get{
-            return self.markdownString.componentsSeparatedByString("<h2>").count - 1
+            return self.firstSection.sections.count
         }
     }
     
@@ -129,35 +124,14 @@ class Menu
     }
     
     func sectionName(index:Int)->String{
-        let headers = self.markdownString.componentsSeparatedByString("<h2>")
-        let currentHeader = headers[index+1]
-        
-        return currentHeader.componentsSeparatedByString("</h2>")[0]
+        return self.firstSection.sections[index].name
     }
     
     func numberOfRowsForSection(index:Int)->Int{
-        let headers = self.markdownString.componentsSeparatedByString("<h2>")
-        let currentHeader = headers[index+1]
-    
-        return currentHeader.componentsSeparatedByString("<li>").count-1
+        return self.firstSection.sections[index].items.count
     }
     
-    func textForSection(section:Int, row:Int)->MenuItem{
-        let headers = self.markdownString.componentsSeparatedByString("<h2>")
-        let currentHeader = headers[section+1]
-        
-        var name = currentHeader.componentsSeparatedByString("</li>")[row].stringByReplacingOccurrencesOfString("\n", withString: "").componentsSeparatedByString("<li>")[1]
-        var desc = ""
-        
-        if name.containsString("(") {
-            let comps = name.componentsSeparatedByString("(")
-            
-            desc = comps[1].stringByReplacingOccurrencesOfString(")", withString: "")
-            name = comps[0].stringByReplacingOccurrencesOfString("(", withString: "")
-        }
-        
-        let item = MenuItem(name:name, desc:desc)
-        
-        return item
+    func textForSection(section:Int, row:Int)->UBItem{
+        return self.firstSection.sections[section].items[row]
     }
 }
