@@ -91,8 +91,8 @@ class Menu
                         var price:String = "0.0"
                         var desc:String = ""
                         
-                        if let jsonPrice = itemJSON["p"].string{
-                            price = jsonPrice
+                        if let jsonPrice = itemJSON["p"].float{
+                            price = "\(jsonPrice) lei"
                         }
                         
                         if let jsonDesc = itemJSON["d"].string{

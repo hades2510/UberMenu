@@ -50,6 +50,7 @@ class MenuTableViewController: UITableViewController{
         
         cell.nameLabel.text = item.name
         cell.descLabel.text = item.desc
+        cell.priceLabel.text = item.price
         
         
         return cell
