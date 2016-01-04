@@ -13,4 +13,5 @@ class MenuTableCellView: UITableViewCell{
     
     @IBOutlet weak var descLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
 }

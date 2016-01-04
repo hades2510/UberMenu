@@ -102,7 +102,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nqf-fz-zeH" id="Qes-wr-8fQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="751" verticalHuggingPriority="751" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x39-Qa-aQa">
@@ -112,18 +112,26 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="750" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHy-lo-Q0v">
-                                            <rect key="frame" x="20" y="33" width="530" height="6"/>
+                                            <rect key="frame" x="20" y="32" width="530" height="7"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mua-sx-NiG">
+                                            <rect key="frame" x="553" y="10" width="39" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="sHy-lo-Q0v" secondAttribute="bottom" constant="10" id="BQ1-i8-Oj6"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="Mua-sx-NiG" secondAttribute="trailing" id="EOA-jx-Y7D"/>
                                         <constraint firstItem="sHy-lo-Q0v" firstAttribute="leading" secondItem="Qes-wr-8fQ" secondAttribute="leading" constant="20" id="GTo-dm-fVr"/>
                                         <constraint firstAttribute="trailing" secondItem="sHy-lo-Q0v" secondAttribute="trailing" constant="50" id="Odf-ej-4D9"/>
                                         <constraint firstItem="x39-Qa-aQa" firstAttribute="top" secondItem="Qes-wr-8fQ" secondAttribute="top" constant="10" id="XZq-aK-MGm"/>
                                         <constraint firstItem="sHy-lo-Q0v" firstAttribute="top" secondItem="x39-Qa-aQa" secondAttribute="bottom" constant="2" id="ffG-ST-meN"/>
+                                        <constraint firstItem="Mua-sx-NiG" firstAttribute="centerY" secondItem="x39-Qa-aQa" secondAttribute="centerY" id="n2o-4I-gAQ"/>
                                         <constraint firstItem="x39-Qa-aQa" firstAttribute="leading" secondItem="Qes-wr-8fQ" secondAttribute="leading" constant="20" id="n4K-wb-cxd"/>
                                         <constraint firstAttribute="trailing" secondItem="x39-Qa-aQa" secondAttribute="trailing" constant="50" id="qRi-CU-hRh"/>
                                     </constraints>
@@ -131,6 +139,7 @@
                                 <connections>
                                     <outlet property="descLabel" destination="sHy-lo-Q0v" id="azL-y7-ToX"/>
                                     <outlet property="nameLabel" destination="x39-Qa-aQa" id="BaH-cv-cZF"/>
+                                    <outlet property="priceLabel" destination="Mua-sx-NiG" id="1p4-YX-AM8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
