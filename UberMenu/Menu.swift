@@ -16,14 +16,9 @@ class Menu
     //json string
     let rawString:String
     let style:String
+    var noSections:Int = -1
     
     var firstSection:UBSection
-    
-    var sections:Int{
-        get{
-            return self.firstSection.sections.count
-        }
-    }
     
     init(_ rawString:String){
         self.rawString = rawString
@@ -123,15 +118,26 @@ class Menu
         return builder.generatedAttributedString()
     }
     
+    var sections:Int{
+        get{
+            if self.noSections == -1 {
+                //get the total number of sections
+                self.noSections = self.firstSection.numberOfAncestorSections()-1
+            }
+            
+            return self.noSections
+        }
+    }
+    
     func sectionName(index:Int)->String{
-        return self.firstSection.sections[index].name
+        return (self.firstSection.findSectionAtNumber(index+1)?.name)!
     }
     
     func numberOfRowsForSection(index:Int)->Int{
-        return self.firstSection.sections[index].items.count
+        return (self.firstSection.findSectionAtNumber(index+1)?.items.count)!
     }
     
     func textForSection(section:Int, row:Int)->UBItem{
-        return self.firstSection.sections[section].items[row]
+        return (self.firstSection.findSectionAtNumber(section+1)?.items[row])!
     }
 }
