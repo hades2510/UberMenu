@@ -16,7 +16,7 @@ class UBItem{
     let desc:String
     let price:String
     
-    var tags:Array<AnyObject>!
+    var tags:Array<UBTag>!
     
     init(_ name:String, price:String, desc:String){
         self.name = name

@@ -32,7 +32,7 @@ class Menu
         if let data = rawString.dataUsingEncoding(NSUTF8StringEncoding){
             let jsonMenu = JSON(data:data)
             
-            self.parseSection(jsonMenu, parentSection: firstSection)
+            self.parseSection(jsonMenu, parentSection: firstSection, tags:[])
         }
         
         //create the markdown from UBSection
@@ -71,14 +71,19 @@ class Menu
         return sectionMarkdown
     }
     
-    func parseSection(jsonFragment:JSON, parentSection:UBSection){
+    func parseSection(jsonFragment:JSON, parentSection:UBSection, tags:Array<UBTag>){
+        
         //we got sections
         for (_,subJSON):(String,JSON) in jsonFragment["s"]{
+            var tmpTags = Array(tags)
+            
             if let name = subJSON["n"].string {
                 let newSection = UBSection(name)
                 
                 //adding the section to the parent section
                 parentSection.sections.append(newSection)
+                
+                tmpTags.append(UBTag(name:newSection.name))
                 
                 //adding items if any
                 for (_,itemJSON):(String,JSON) in subJSON["i"]{
@@ -95,13 +100,14 @@ class Menu
                         }
                         
                         let item = UBItem(itemName,price:price,desc:desc)
+                        item.tags = tmpTags
                         
                         newSection.items.append(item)
                     }
                 }
                 
                 //recurse
-                self.parseSection(subJSON, parentSection: newSection)
+                self.parseSection(subJSON, parentSection: newSection, tags: tmpTags)
             }
         }
     }
@@ -138,6 +144,7 @@ class Menu
     }
     
     func textForSection(section:Int, row:Int)->UBItem{
+        print((self.firstSection.findSectionAtNumber(section+1)?.items[row])!.tags )
         return (self.firstSection.findSectionAtNumber(section+1)?.items[row])!
     }
 }
