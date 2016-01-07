@@ -26,6 +26,8 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
 
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var debugView: UITextView!
+    @IBOutlet weak var connectionIndTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var connectionIndicator: UIActivityIndicatorView!
     
     func log(what:String)
     {
@@ -193,6 +195,27 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
     func changeState(state:UBWelcomeState){
         currentState = state
         self.statusLabel.text = state.description
+        
+        switch state{
+        case .InitialState:
+            self.connectionIndicator.startAnimating()
+        case .BLTurnedOff:
+            self.connectionIndicator.stopAnimating()
+        case .StartedSearch:
+            self.connectionIndicator.startAnimating()
+        case .MenuReceived:
+            self.connectionIndicator.stopAnimating()
+            
+            self.view.layoutIfNeeded()
+
+            UIView.animateWithDuration(1.0, animations: {
+                self.connectionIndicator.alpha = 0.0
+                self.connectionIndTopConstraint.constant = -16
+                self.view.layoutIfNeeded()
+                })
+        default:
+            break
+        }
     }
     
     override func viewDidLoad() {

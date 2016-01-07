@@ -54,9 +54,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="B92-ko-bsd">
+                                <rect key="frame" x="290" y="111" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="B92-ko-bsd" firstAttribute="top" secondItem="p0h-8m-FY6" secondAttribute="bottom" constant="8" id="4iG-AF-CK1"/>
+                            <constraint firstItem="B92-ko-bsd" firstAttribute="centerX" secondItem="p0h-8m-FY6" secondAttribute="centerX" id="Dto-5o-3ZS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="c5T-ck-ekw" secondAttribute="leading" id="Ehq-T6-Cxv"/>
                             <constraint firstItem="p0h-8m-FY6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qis-DR-wDC"/>
                             <constraint firstItem="p0h-8m-FY6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="X6B-o0-Zax"/>
@@ -73,6 +78,8 @@
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
+                        <outlet property="connectionIndTopConstraint" destination="4iG-AF-CK1" id="pwR-Va-6DJ"/>
+                        <outlet property="connectionIndicator" destination="B92-ko-bsd" id="dHF-PI-nSS"/>
                         <outlet property="debugView" destination="c5T-ck-ekw" id="dPL-qg-uBy"/>
                         <outlet property="statusLabel" destination="p0h-8m-FY6" id="wMW-dY-lAP"/>
                     </connections>
