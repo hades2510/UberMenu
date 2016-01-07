@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreBluetooth
 
-class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDelegate {
+class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDelegate {
     
     var bleManager: CBCentralManager!;
     var peripheral: CBPeripheral!;
