@@ -48,39 +48,50 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0h-8m-FY6">
-                                <rect key="frame" x="279" y="82" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0h-8m-FY6">
+                                <rect key="frame" x="0.0" y="82" width="600" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.14901960780000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="B92-ko-bsd">
-                                <rect key="frame" x="290" y="111" width="20" height="20"/>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="B92-ko-bsd">
+                                <rect key="frame" x="290" y="90" width="20" height="20"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYZ-Yf-ToU">
+                                <rect key="frame" x="120" y="118" width="360" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="360" id="CYL-da-M2f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.4823529412" green="0.8980392157" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3wC-aq-NeA" kind="show" identifier="go_to_menu" id="jl1-cW-KqF"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="LYZ-Yf-ToU" firstAttribute="top" secondItem="B92-ko-bsd" secondAttribute="bottom" constant="8" id="4cX-MG-NCK"/>
                             <constraint firstItem="B92-ko-bsd" firstAttribute="top" secondItem="p0h-8m-FY6" secondAttribute="bottom" constant="8" id="4iG-AF-CK1"/>
                             <constraint firstItem="B92-ko-bsd" firstAttribute="centerX" secondItem="p0h-8m-FY6" secondAttribute="centerX" id="Dto-5o-3ZS"/>
                             <constraint firstAttribute="leadingMargin" secondItem="c5T-ck-ekw" secondAttribute="leading" id="Ehq-T6-Cxv"/>
+                            <constraint firstItem="B92-ko-bsd" firstAttribute="centerX" secondItem="LYZ-Yf-ToU" secondAttribute="centerX" id="Kya-XH-fVt"/>
                             <constraint firstItem="p0h-8m-FY6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qis-DR-wDC"/>
                             <constraint firstItem="p0h-8m-FY6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="X6B-o0-Zax"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c5T-ck-ekw" secondAttribute="bottom" constant="20" id="Zxb-Ad-jZd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c5T-ck-ekw" secondAttribute="trailing" id="fRc-oG-VCo"/>
+                            <constraint firstItem="p0h-8m-FY6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="uS8-3m-Tu3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome" id="LkI-8b-yrI">
-                        <barButtonItem key="rightBarButtonItem" title="Meniu" id="3yW-db-KTI">
-                            <connections>
-                                <segue destination="3wC-aq-NeA" kind="show" identifier="go_to_table" id="YvA-Yt-Xn6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Welcome" id="LkI-8b-yrI"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="connectionIndTopConstraint" destination="4iG-AF-CK1" id="pwR-Va-6DJ"/>
                         <outlet property="connectionIndicator" destination="B92-ko-bsd" id="dHF-PI-nSS"/>
                         <outlet property="debugView" destination="c5T-ck-ekw" id="dPL-qg-uBy"/>
+                        <outlet property="menuButton" destination="LYZ-Yf-ToU" id="cix-nT-0h4"/>
                         <outlet property="statusLabel" destination="p0h-8m-FY6" id="wMW-dY-lAP"/>
                     </connections>
                 </viewController>

@@ -28,6 +28,7 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
     @IBOutlet weak var debugView: UITextView!
     @IBOutlet weak var connectionIndTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var connectionIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var menuButton: UIButton!
     
     func log(what:String)
     {
@@ -199,6 +200,7 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
         switch state{
         case .InitialState:
             self.connectionIndicator.startAnimating()
+            self.menuButton.alpha = 0.0
         case .BLTurnedOff:
             self.connectionIndicator.stopAnimating()
         case .StartedSearch:
@@ -206,10 +208,12 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
         case .MenuReceived:
             self.connectionIndicator.stopAnimating()
             
-            self.view.layoutIfNeeded()
+            //self.view.layoutIfNeeded()
+            self.menuButton.setTitle( self.menuName, forState: .Normal)
 
             UIView.animateWithDuration(1.0, animations: {
                 self.connectionIndicator.alpha = 0.0
+                self.menuButton.alpha = 1.0
                 self.connectionIndTopConstraint.constant = -16
                 self.view.layoutIfNeeded()
                 })
@@ -237,7 +241,7 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "go_to_table" {
+        if segue.identifier == "go_to_menu" {
             (segue.destinationViewController as! MenuTableViewController).dataSource = self.menu
         }
     }
