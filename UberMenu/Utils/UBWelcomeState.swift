@@ -10,6 +10,7 @@ import Foundation
 
 enum UBWelcomeState: CustomStringConvertible{
     
+    case InitialState
     case BLTurnedOff
     case StartedSearch
     case MenuFound
@@ -18,6 +19,8 @@ enum UBWelcomeState: CustomStringConvertible{
     
     var description:String {
         switch self{
+        case .InitialState:
+            return "Warming up"
         case .BLTurnedOff:
             return "BlueTooth is turned off"
         case .StartedSearch:
