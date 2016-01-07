@@ -20,6 +20,8 @@ class MenuTableViewController: UITableViewController{
             tableView.rowHeight = UITableViewAutomaticDimension;
             tableView.estimatedRowHeight = 44;
         }
+        
+        self.title = dataSource.name
     }
     
     //return the number of sections

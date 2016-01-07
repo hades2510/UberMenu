@@ -12,12 +12,16 @@ import SwiftyJSON
 
 class Menu
 {
+    //name of the menu
+    var name:String = ""
+    
     var markdownString:String = ""
     //json string
     let rawString:String
     let style:String
     var noSections:Int = -1
     
+    //root section
     var firstSection:UBSection
     
     init(_ rawString:String){

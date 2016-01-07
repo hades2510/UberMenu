@@ -21,6 +21,8 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
     var menuReadBytes: Int32 = 0;
 
     var currentState:UBWelcomeState = .InitialState
+    
+    private var menuName:String = ""
 
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var debugView: UITextView!
@@ -63,6 +65,8 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
             {
                 log("Received name:")
                 log(name)
+                
+                self.menuName = name
                 
                 self.changeState(.MenuFound)
                 
@@ -138,7 +142,10 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
                 rawMenu += currentString;
                 
                 if menuReadBytes >= self.menuLength{
+                    
                     self.menu = Menu(rawMenu)
+                    self.menu.name = self.menuName
+                        
                     self.changeState(.MenuReceived)
                     presentMenu()
                 }
