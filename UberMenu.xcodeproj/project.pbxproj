@@ -14,6 +14,7 @@
 		8E0E8CD81C21BB2F0005F6A1 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E8CD71C21BB2F0005F6A1 /* MenuTableViewController.swift */; };
 		8E0E8CDB1C21CFE30005F6A1 /* MenuTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E8CDA1C21CFE30005F6A1 /* MenuTableCellView.swift */; };
 		8E176A851C3D6E9000ADB7D7 /* UBAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E176A841C3D6E9000ADB7D7 /* UBAppearance.swift */; };
+		8E176A871C3E86B700ADB7D7 /* UBWelcomeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E176A861C3E86B700ADB7D7 /* UBWelcomeState.swift */; };
 		8E1AE1441C2C1CBC009D5A4D /* UBItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AE1431C2C1CBC009D5A4D /* UBItem.swift */; };
 		8E1AE1461C2C1F25009D5A4D /* UBSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1AE1451C2C1F25009D5A4D /* UBSection.swift */; };
 		8E1D94261C3C2E9F0096BCD7 /* UBTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1D94251C3C2E9F0096BCD7 /* UBTag.swift */; };
@@ -46,6 +47,7 @@
 		8E0E8CD71C21BB2F0005F6A1 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		8E0E8CDA1C21CFE30005F6A1 /* MenuTableCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableCellView.swift; sourceTree = "<group>"; };
 		8E176A841C3D6E9000ADB7D7 /* UBAppearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBAppearance.swift; sourceTree = "<group>"; };
+		8E176A861C3E86B700ADB7D7 /* UBWelcomeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBWelcomeState.swift; sourceTree = "<group>"; };
 		8E1AE1431C2C1CBC009D5A4D /* UBItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBItem.swift; sourceTree = "<group>"; };
 		8E1AE1451C2C1F25009D5A4D /* UBSection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBSection.swift; sourceTree = "<group>"; };
 		8E1D94251C3C2E9F0096BCD7 /* UBTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UBTag.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				8E8F033B1C15EA3E00DE951B /* NSString+Markdown.h */,
 				8E8F033C1C15EA3E00DE951B /* NSString+Markdown.m */,
 				8E176A841C3D6E9000ADB7D7 /* UBAppearance.swift */,
+				8E176A861C3E86B700ADB7D7 /* UBWelcomeState.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				8E85244D1BF606A4002CAA6A /* ViewController.swift in Sources */,
 				8E85244B1BF606A4002CAA6A /* AppDelegate.swift in Sources */,
 				8E0E8CD81C21BB2F0005F6A1 /* MenuTableViewController.swift in Sources */,
+				8E176A871C3E86B700ADB7D7 /* UBWelcomeState.swift in Sources */,
 				8EC59C401BFB2B7200445953 /* SplashController.swift in Sources */,
 				8E8F03381C15E9B100DE951B /* renderers.c in Sources */,
 				8E176A851C3D6E9000ADB7D7 /* UBAppearance.swift in Sources */,
