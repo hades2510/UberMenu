@@ -6,6 +6,7 @@
 //  Copyright © 2015 samuraibonzai. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import CoreBluetooth
 
@@ -19,7 +20,9 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     var menuLength: Int32 = 0;
     var menuReadBytes: Int32 = 0;
 
+    var currentState:UBWelcomeState = .InitialState
 
+    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var debugView: UITextView!
     
     func log(what:String)
@@ -39,6 +42,9 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         {
             self.startScan();
         }
+        else{
+            self.changeState(.BLTurnedOff)
+        }
         
         logInt(central.state.rawValue);
     }
@@ -57,8 +63,8 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
             {
                 log("Received name:")
                 log(name)
-            
-                self.navigationItem.title = name
+                
+                self.changeState(.MenuFound)
                 
                 self.peripheral = peripheral
                 self.peripheral.delegate = self
@@ -88,6 +94,7 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         log("Registering for notifications")
         peripheral.setNotifyValue(true, forCharacteristic: service.characteristics![0])
         log("Reading menu/characteristic")
+        self.changeState(.ReadingMenu)
         readMenu()
         stopScanning();
     }
@@ -132,6 +139,7 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
                 
                 if menuReadBytes >= self.menuLength{
                     self.menu = Menu(rawMenu)
+                    self.changeState(.MenuReceived)
                     presentMenu()
                 }
             }
@@ -163,6 +171,7 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     func startScan()
     {
         log("Starting scan")
+        self.changeState(.StartedSearch)
         bleManager.scanForPeripheralsWithServices(nil, options: nil)
     }
     
@@ -174,10 +183,16 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
         
     }
     
+    func changeState(state:UBWelcomeState){
+        currentState = state
+        self.statusLabel.text = state.description
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        self.changeState(.InitialState)
         log("Starting BLE manager")
         bleManager = CBCentralManager(delegate:self, queue:nil);
     }

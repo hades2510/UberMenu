@@ -48,10 +48,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p0h-8m-FY6">
+                                <rect key="frame" x="279" y="82" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="c5T-ck-ekw" secondAttribute="leading" id="Ehq-T6-Cxv"/>
+                            <constraint firstItem="p0h-8m-FY6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qis-DR-wDC"/>
+                            <constraint firstItem="p0h-8m-FY6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="38" id="X6B-o0-Zax"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c5T-ck-ekw" secondAttribute="bottom" constant="20" id="Zxb-Ad-jZd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c5T-ck-ekw" secondAttribute="trailing" id="fRc-oG-VCo"/>
                         </constraints>
@@ -66,6 +74,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="debugView" destination="c5T-ck-ekw" id="dPL-qg-uBy"/>
+                        <outlet property="statusLabel" destination="p0h-8m-FY6" id="wMW-dY-lAP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
