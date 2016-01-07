@@ -21,8 +21,6 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
 
 
     @IBOutlet weak var debugView: UITextView!
-    @IBOutlet weak var menuLabel: UILabel!
-    @IBOutlet weak var menuArea: UITextView!
     
     func log(what:String)
     {
@@ -173,18 +171,12 @@ class ViewController: UIViewController,CBCentralManagerDelegate,CBPeripheralDele
     }
     
     func presentMenu(){
-        if let attributedMenu = self.menu.attributedText(){
-            menuArea.attributedText = attributedMenu
-        }
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        //UITextArea doesn't support changing text and keeping the formatting
-        //when the TextArea is set as selectable false in the IB
-        menuArea.selectable = false;
         
         log("Starting BLE manager")
         bleManager = CBCentralManager(delegate:self, queue:nil);

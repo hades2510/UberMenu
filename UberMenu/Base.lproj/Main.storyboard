@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-176" y="372"/>
         </scene>
-        <!--View Controller-->
+        <!--Welcome-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UberMenu" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,35 +48,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lrt-G0-rHg">
-                                <rect key="frame" x="300" y="52" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c9h-cP-GWr">
-                                <rect key="frame" x="20" y="84" width="560" height="288"/>
-                                <color key="backgroundColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
-                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
-                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="c9h-cP-GWr" firstAttribute="top" secondItem="Lrt-G0-rHg" secondAttribute="bottom" constant="32" id="9Cw-HU-mKp"/>
                             <constraint firstAttribute="leadingMargin" secondItem="c5T-ck-ekw" secondAttribute="leading" id="Ehq-T6-Cxv"/>
-                            <constraint firstItem="c5T-ck-ekw" firstAttribute="top" secondItem="c9h-cP-GWr" secondAttribute="bottom" constant="8" id="Rxg-Wb-lJE"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="c5T-ck-ekw" secondAttribute="bottom" constant="20" id="Zxb-Ad-jZd"/>
-                            <constraint firstItem="Lrt-G0-rHg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="b0e-zo-OxB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="c9h-cP-GWr" secondAttribute="trailing" id="eEb-te-Ptv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="c5T-ck-ekw" secondAttribute="trailing" id="fRc-oG-VCo"/>
-                            <constraint firstItem="c9h-cP-GWr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rz7-EZ-agc"/>
-                            <constraint firstItem="Lrt-G0-rHg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wuF-Ad-FaO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LkI-8b-yrI">
+                    <navigationItem key="navigationItem" title="Welcome" id="LkI-8b-yrI">
                         <barButtonItem key="rightBarButtonItem" title="Meniu" id="3yW-db-KTI">
                             <connections>
                                 <segue destination="3wC-aq-NeA" kind="show" identifier="go_to_table" id="YvA-Yt-Xn6"/>
@@ -86,8 +66,6 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="debugView" destination="c5T-ck-ekw" id="dPL-qg-uBy"/>
-                        <outlet property="menuArea" destination="c9h-cP-GWr" id="PUl-j6-3Gf"/>
-                        <outlet property="menuLabel" destination="Lrt-G0-rHg" id="9G5-Ew-wdi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
