@@ -158,11 +158,46 @@
                             <outlet property="delegate" destination="3wC-aq-NeA" id="6GX-E3-v7O"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Meniu" id="3Qh-mj-8hG"/>
+                    <navigationItem key="navigationItem" title="Meniu" id="3Qh-mj-8hG">
+                        <barButtonItem key="rightBarButtonItem" title="Filtre" id="id3-kq-n4c">
+                            <connections>
+                                <segue destination="ZAJ-Oj-rjQ" kind="show" id="9ar-2T-qwq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kve-tR-PAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1239" y="372"/>
+        </scene>
+        <!--Filtre-->
+        <scene sceneID="U2F-hx-H6T">
+            <objects>
+                <tableViewController id="ZAJ-Oj-rjQ" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="L3R-zC-mOb">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="tO8-Yw-vQe">
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tO8-Yw-vQe" id="y6T-Xs-rj6">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ZAJ-Oj-rjQ" id="frN-AC-yM9"/>
+                            <outlet property="delegate" destination="ZAJ-Oj-rjQ" id="oJZ-d2-Btd"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Filtre" id="eo1-lc-ylH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xPP-9O-rLa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="372"/>
         </scene>
         <!--Splash-->
         <scene sceneID="JfT-w9-3ol">
