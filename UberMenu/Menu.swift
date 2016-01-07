@@ -21,6 +21,9 @@ class Menu
     let style:String
     var noSections:Int = -1
     
+    //available tags
+    var tags:Array<UBTag> = []
+    
     //root section
     var firstSection:UBSection
     
@@ -87,7 +90,10 @@ class Menu
                 //adding the section to the parent section
                 parentSection.sections.append(newSection)
                 
-                tmpTags.append(UBTag(name:newSection.name))
+                let newTag = UBTag(name:newSection.name)
+                
+                tmpTags.append(newTag)
+                self.tags.append(newTag)
                 
                 //adding items if any
                 for (_,itemJSON):(String,JSON) in subJSON["i"]{
