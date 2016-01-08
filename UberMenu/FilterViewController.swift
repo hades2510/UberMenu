@@ -11,6 +11,8 @@ import UIKit
 
 class FilterViewController: UITableViewController{
     
+    var filterDelegate:UBFilterSelected!
+    
     private let cellID:String = "filterCellViewId"
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -25,4 +27,9 @@ class FilterViewController: UITableViewController{
         return cell
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let del = filterDelegate{
+            del.filterSelected(UBContext.sharedInstance.menu.tags[indexPath.row])
+        }
+    }
 }
