@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MenuTableViewController: UITableViewController{
+class MenuTableViewController: UITableViewController, UBFilterSelected{
     
     var dataSource:Menu!
     
@@ -39,12 +39,6 @@ class MenuTableViewController: UITableViewController{
         return self.dataSource.numberOfRowsForSection(section)
     }
     
-    /*
-    override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-        return ["ceva","altceva","super"];
-    }
-    */
-    
     // Style Cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -60,5 +54,19 @@ class MenuTableViewController: UITableViewController{
         return cell
         
     }
+    
+    //UBFilterSelected protocol
+    func filterSelected(filter: UBTag) {
+        
+    }
+    
+    func filterDeselected(filter: UBTag) {
+        
+    }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let filterController = segue.destinationViewController as? FilterViewController{
+            filterController.filterDelegate = self
+        }
+    }
 }
