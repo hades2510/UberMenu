@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3CBE2814081D9EE5F209C557 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A4206A66BDA9B6098315586 /* Pods.framework */; };
+		8E0CBA471C3ED08300FD117C /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBA461C3ED08300FD117C /* FilterViewController.swift */; };
+		8E0CBA491C3FB46F00FD117C /* FilterCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0CBA481C3FB46F00FD117C /* FilterCellView.swift */; };
 		8E0E8CCE1C21A9810005F6A1 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0E8CCD1C21A9810005F6A1 /* icon@2x.png */; };
 		8E0E8CD01C21A9ED0005F6A1 /* icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E0E8CCF1C21A9ED0005F6A1 /* icon@3x.png */; };
 		8E0E8CD61C21ADA00005F6A1 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0E8CD51C21ADA00005F6A1 /* Menu.swift */; };
@@ -41,6 +43,8 @@
 /* Begin PBXFileReference section */
 		1A4206A66BDA9B6098315586 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59659081616B233F88CB841A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8E0CBA461C3ED08300FD117C /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		8E0CBA481C3FB46F00FD117C /* FilterCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCellView.swift; sourceTree = "<group>"; };
 		8E0E8CCD1C21A9810005F6A1 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		8E0E8CCF1C21A9ED0005F6A1 /* icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@3x.png"; sourceTree = "<group>"; };
 		8E0E8CD51C21ADA00005F6A1 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
@@ -115,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				8E0E8CDA1C21CFE30005F6A1 /* MenuTableCellView.swift */,
+				8E0CBA481C3FB46F00FD117C /* FilterCellView.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 				8E8524561BF606A4002CAA6A /* Info.plist */,
 				8EC59C3F1BFB2B7200445953 /* SplashController.swift */,
 				8E0E8CD71C21BB2F0005F6A1 /* MenuTableViewController.swift */,
+				8E0CBA461C3ED08300FD117C /* FilterViewController.swift */,
 			);
 			path = UberMenu;
 			sourceTree = "<group>";
@@ -358,7 +364,9 @@
 			files = (
 				8E85244D1BF606A4002CAA6A /* ScanningViewController.swift in Sources */,
 				8E85244B1BF606A4002CAA6A /* AppDelegate.swift in Sources */,
+				8E0CBA491C3FB46F00FD117C /* FilterCellView.swift in Sources */,
 				8E0E8CD81C21BB2F0005F6A1 /* MenuTableViewController.swift in Sources */,
+				8E0CBA471C3ED08300FD117C /* FilterViewController.swift in Sources */,
 				8E176A871C3E86B700ADB7D7 /* UBWelcomeState.swift in Sources */,
 				8EC59C401BFB2B7200445953 /* SplashController.swift in Sources */,
 				8E8F03381C15E9B100DE951B /* renderers.c in Sources */,
