@@ -21,6 +21,8 @@ class MenuTableViewController: UITableViewController{
             tableView.estimatedRowHeight = 44;
         }
         
+        self.dataSource = UBContext.sharedInstance.menu;
+        
         self.title = dataSource.name
     }
     

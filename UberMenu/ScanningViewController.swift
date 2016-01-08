@@ -15,7 +15,6 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
     var bleManager: CBCentralManager!;
     var peripheral: CBPeripheral!;
     var rawMenu   : String="";
-    var menu      : Menu!;
     
     var menuLength: Int32 = 0;
     var menuReadBytes: Int32 = 0;
@@ -146,8 +145,8 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
                 
                 if menuReadBytes >= self.menuLength{
                     
-                    self.menu = Menu(rawMenu)
-                    self.menu.name = self.menuName
+                    UBContext.sharedInstance.menu = Menu(rawMenu)
+                    UBContext.sharedInstance.menu.name = self.menuName
                         
                     self.changeState(.MenuReceived)
                     presentMenu()
@@ -238,12 +237,6 @@ class ScanningViewController: UIViewController,CBCentralManagerDelegate,CBPeriph
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "go_to_menu" {
-            (segue.destinationViewController as! MenuTableViewController).dataSource = self.menu
-        }
     }
 }
 
