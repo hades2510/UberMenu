@@ -57,11 +57,11 @@ class MenuTableViewController: UITableViewController, UBFilterSelected{
     
     //UBFilterSelected protocol
     func filterSelected(filter: UBTag) {
-        
+        self.navigationController?.popToViewController(self, animated: true)
     }
     
     func filterDeselected(filter: UBTag) {
-        
+        self.navigationController?.popToViewController(self, animated: true)
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
