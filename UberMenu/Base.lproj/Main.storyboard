@@ -167,6 +167,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="menuView" destination="Pre-t1-fQt" id="Rfs-9x-Uj1"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kve-tR-PAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

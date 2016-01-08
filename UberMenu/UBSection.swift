@@ -57,4 +57,20 @@ class UBSection{
         
         return self
     }
+    
+    func findItemsWithTag(tag:UBTag)->Array<UBItem>{
+        var items:Array<UBItem> = []
+        
+        for item in self.items {
+            if item.tags.contains({ $0 == tag }) {
+                items.append(item)
+            }
+        }
+        
+        for section in self.sections{
+            items.appendContentsOf(section.findItemsWithTag(tag))
+        }
+        
+        return items
+    }
 }

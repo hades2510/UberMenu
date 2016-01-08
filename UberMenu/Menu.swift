@@ -18,7 +18,8 @@ class Menu
     var markdownString:String = ""
     //json string
     let rawString:String
-    let style:String
+    //style for markdown
+    let style:String = "<style>h2{color:rgb(100,200,100);font-size:20px}h3{font-size:18px;}body{color:rgb(255,255,255);font-family:-apple-system;font-size:16px}</style>"
     var noSections:Int = -1
     
     //available tags
@@ -27,11 +28,13 @@ class Menu
     //root section
     var firstSection:UBSection
     
+    init(){
+        rawString=""
+        firstSection=UBSection("menu")
+    }
+    
     init(_ rawString:String){
         self.rawString = rawString
-        
-        //style for markdown
-        self.style = "<style>h2{color:rgb(100,200,100);font-size:20px}h3{font-size:18px;}body{color:rgb(255,255,255);font-family:-apple-system;font-size:16px}</style>"
         
         //first section
         self.firstSection = UBSection("menu")
@@ -156,5 +159,17 @@ class Menu
     func textForSection(section:Int, row:Int)->UBItem{
         print((self.firstSection.findSectionAtNumber(section+1)?.items[row])!.tags )
         return (self.firstSection.findSectionAtNumber(section+1)?.items[row])!
+    }
+    
+    func filterByTag(tag:UBTag)->Menu{
+        let newMenu:Menu = Menu()
+ 
+        let filteredSection:UBSection = UBSection(tag.name)
+        
+        newMenu.firstSection.sections.append(filteredSection)
+
+        filteredSection.items = self.firstSection.findItemsWithTag(tag)
+        
+        return newMenu
     }
 }

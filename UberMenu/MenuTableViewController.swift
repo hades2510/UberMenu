@@ -11,6 +11,7 @@ import UIKit
 
 class MenuTableViewController: UITableViewController, UBFilterSelected{
     
+    @IBOutlet var menuView: UITableView!
     var dataSource:Menu!
     
     override func viewDidLoad() {
@@ -58,10 +59,13 @@ class MenuTableViewController: UITableViewController, UBFilterSelected{
     //UBFilterSelected protocol
     func filterSelected(filter: UBTag) {
         self.navigationController?.popToViewController(self, animated: true)
+        self.dataSource = UBContext.sharedInstance.menu.filterByTag(filter)
+        menuView.reloadData()
     }
     
     func filterDeselected(filter: UBTag) {
         self.navigationController?.popToViewController(self, animated: true)
+        menuView.reloadData()
     }
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct UBTag{
+struct UBTag:Equatable{
     let name:String
+}
+
+func ==(lhs: UBTag, rhs: UBTag)->Bool{
+    return lhs.name == rhs.name
 }
