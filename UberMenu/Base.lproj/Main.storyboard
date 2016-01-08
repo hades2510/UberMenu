@@ -85,7 +85,9 @@
                             <constraint firstItem="p0h-8m-FY6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="uS8-3m-Tu3"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Welcome" id="LkI-8b-yrI"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="LkI-8b-yrI">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="LvG-LX-EtP"/>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <connections>
                         <outlet property="connectionIndTopConstraint" destination="4iG-AF-CK1" id="pwR-Va-6DJ"/>
